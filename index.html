@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/dice-48.png">
+    <title>Pig Game</title>
+</head>
+
+<body>
+
+    <div class="dice1 dice hidden">
+        <div class="um1"></div>
+    </div>
+
+    <div class="dice2 dice hidden">
+        <div class="dois1"></div>
+        <div class="dois2"></div>
+    </div>
+
+    <div class="dice3 dice hidden">
+        <div class="tres1"></div>
+        <div class="tres2"></div>
+        <div class="tres3"></div>
+    </div>
+
+    <div class="dice4 dice hidden">
+        <div class="quatro1"></div>
+        <div class="quatro2"></div>
+        <div class="quatro3"></div>
+        <div class="quatro4"></div>
+    </div>
+
+    <div class="dice5 dice hidden">
+        <div class="cinco1"></div>
+        <div class="cinco2"></div>
+        <div class="cinco3"></div>
+        <div class="cinco4"></div>
+        <div class="cinco5"></div>
+    </div>
+
+    <div class="dice6 dice hidden">
+        <div class="seis1"></div>
+        <div class="seis2"></div>
+        <div class="seis3"></div>
+        <div class="seis4"></div>
+        <div class="seis5"></div>
+        <div class="seis6"></div>
+    </div>
+
+    <!--Container que mantém os items do site-->
+    <main class="main" id="main">
+
+        <div class="player1" id="player1">
+            <div class="nome-pontos1">
+                <h1 class="name1">Player 1</h1>
+                
+            </div>    
+
+            <div class="currents1">
+                
+                <h3 class="current1">Current</h1>
+                <h3 class="current11" id="current1-1">0</h1>
+
+            </div>   
+        </div>
+
+        
+        <div class="player2 unable" id="player2">
+            <div class="nomes-pontos2">
+                <h1 class="name2">Player 2</h1>     
+                
+            </div>
+
+            <div class="currents2" id="current2">
+                <h3 class="current2">Current</h1>
+                <h3 class="current21" id="current2-1">0</h1>
+            </div>    
+        </div>
+
+        <button class="playAgain" id="playAgain">&#128257; Play Again</button>
+        <button class="roll" id="roll">&#127922; Roll</button>
+        <button class="hold" id="hold">&#9995; Hold</button>
+
+    </main>
+
+       <div class="anuncio">
+           <h1 class="anuncio1">Regras do jogo</h1>
+           <ol class="regras">
+            <li>Quem conseguir juntar 100pts primeiro ganha</li>
+            <li>Quem tirar 1 no dado perde todos os pontos e perde a vez</li>
+            <li>Se você não tirar 1 e tiver juntado alguns pontos você pode segurar sua pontuação e passar a vez</li>
+            <li>Divirta-se!</li>
+           </ol>
+
+
+       </div>
+       <div class="overlay"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

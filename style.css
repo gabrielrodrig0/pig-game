@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Dosis:wght@200;300&family=Rajdhani&family=Saira:wght@300&family=Ubuntu+Mono&display=swap');
+
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(-45deg,red,orange);
+    position:relative;
+    backdrop-filter: blur(3px);
+    font-family: 'Saira', sans-serif;
+    text-transform: uppercase;
+    color: #242321;
+}
+
+main {
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff55;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/*Anúncio e overlay*/
+.anuncio {
+    position: absolute; 
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 3rem;
+}
+
+.overlay {
+    background-color: rgb(0,0,0,0.5);
+    position: absolute;
+    z-index:5;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+}
+
+/*players*/
+
+.player1 {
+    position: relative;
+    background-color: #ffffffaa;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+
+.player2 {
+    position: relative;
+    background-color: #ffffffaa;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem ;
+}
+
+/*currents*/
+
+.currents1 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-image: linear-gradient(45deg,red,orange);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.currents2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-image: linear-gradient(-45deg,red,orange);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/*Buttons*/
+button {
+    text-transform: uppercase;
+    background-color: white;
+    font-weight:normal;
+    border: none;   
+    color: #242321;
+    padding: 0.2rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    font-size: 0.5rem;
+    padding: 0.5rem;
+    
+}
+.playAgain {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.roll {
+    position: absolute;
+    top:50%;
+    left: 15%;
+    transform: translate(-20%, -50%);
+}
+
+.hold {
+    position: absolute;
+    top:50%;
+    right: 6%;
+    transform: translate(-20%, -50%);
+}
+
+h1,h3 {
+    text-align: center;
+}
+
+/*JS*/
+.unable {
+    opacity: 0.5;
+}
+
+.hidden {
+    display: none;
+}
+
+/*dices*/
+
+.dice1, .dice2, .dice3, .dice4, .dice5, .dice6{
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    background-color: #ffffffbb;
+    left: 50%;
+    top: 8%;
+    transform: translate(-50%, -8%);
+    border-radius: 1rem;
+}
+
+.um1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.dois1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 80%;
+    transform: translate(-80%, -20%);
+}
+.dois2 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 20%;
+    transform: translate(-20%, -80%);
+}
+
+.tres1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 80%;
+    transform: translate(-80%, -80%);
+}
+
+.tres2 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tres3 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+}
+
+.quatro1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+
+}
+
+.quatro2 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 80%;
+    transform: translate(-80%, -20%);
+}
+
+.quatro3 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 20%;
+    transform: translate(-20%, -80%);
+}
+
+.quatro4 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 80%;
+    transform: translate(-80%, -80%);
+}
+
+.cinco1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+}
+.cinco2 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 80%;
+    transform: translate(-80%, -20%);
+}
+.cinco3 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 20%;
+    transform: translate(-20%, -80%);
+}
+.cinco4 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 80%;
+    transform: translate(-80%, -80%);
+}
+.cinco5 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.seis1 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 20%;
+    transform: translate(-20%, -20%);
+}
+.seis2 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 20%;
+    left: 80%;
+    transform: translate(-80%, -20%);
+}
+.seis3 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 20%;
+    transform: translate(-20%, -80%);
+}
+.seis4 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    top: 80%;
+    left: 80%;
+    transform: translate(-80%, -80%);
+}
+.seis5 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    left: 20%;
+    top: 50%;
+    transform: translate(-20%, -50%);
+}
+.seis6 {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(45deg,red,orange);
+    border-radius: 1rem;
+    left: 80%;
+    top: 50%;
+    transform: translate(-80%, -50%);
+}
+
+/*Responsividade*/
+
+
+/*Outros dispositivos*/
+
+@media screen and (min-width: 300px){
+
+    .regras {
+        font-size: 0.8rem ;
+    }
+}
+
+
+@media screen and (min-width: 400px){
+    main {
+        width: 60%;
+    }
+    .regras {
+        font-size: 0.8rem ;
+    }
+}
+
+@media screen and (min-width: 600px){
+   
+    .roll {
+        left: 25%;
+        transform: translate(-25%, -50%);
+    }
+    
+    .hold {      
+        top:50%;
+        right: 20%;
+        transform: translate(-20%, -50%);
+    }
+    .regras {
+        font-size: 0.8rem ;
+    }
+}
+
+/*desktop*/
+@media screen and (min-width: 1024px){
+    .roll {
+        left: 35%;
+        transform: translate(-35%, -50%);
+    }
+    .hold {
+        right: 30%;
+        transform: translate(-30%, -50%);
+    }
+    .regras {
+        font-size: 0.8rem ;
+    }
+
+}
+
+@media screen and (min-width: 1400px){
+    button {
+        font-size: 1rem;
+    } 
+    .roll {
+        left: 30%;
+        transform: translate(-30%, -50%);
+    }   
+    .hold {
+        right: 25%;
+        transform: translate(-25%, -50%);
+    }
+    .regras {
+        font-size: 1rem ;
+    }
+}
+
